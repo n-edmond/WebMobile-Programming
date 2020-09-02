@@ -7,7 +7,7 @@ This is a repository for CS 490 at umkc
 
 **Wiki Links for Web ICPs**
 
-ICP1: https://github.com/VIJAYAYERUVA/WebMobile-2020Fall/wiki/Web_ICP1
+ICP1: https://github.com/n-edmond/WebMobile-Programming/wiki/Web-ICP-1-Wiki
 
 
 **Wiki Links for Mobile ICPs**
