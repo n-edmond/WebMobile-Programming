@@ -47,18 +47,29 @@ body {
   opacity: 1;
 }
 
-.notification-bar-opacity {
+.notification-bar-opacity {/*creates opacity of the notification icon*/
   opacity: 0.7;
 }
-#notification-icon {
+#notification-icon {/*style used for the notification icon. Creates the icon by using an image*/
   background-image: url("https://ssl.gstatic.com/gb/images/i2_2ec824b0.png");
   width: 30px;
   height: 30px;
   background-position: -315px -38px;
   background-size: 528px 68px;
 }
-#notification-icon:hover{
+#notification-icon:hover{/*darkens the notification button, giving the impression of being clickable*/
   opacity: 1;
+}
+
+.image-icon-opacity{
+  opacity: 1;
+}
+#image-icon{/*used to create the small image of self in upper right corner*/
+  background-image: url(https://lh3.googleusercontent.com/ogw/ADGmqu8kY1ts5pyDsRXNEKj9-LuGtSnMOmH6rlN8g7VS=s32-c-mo);
+  width: 30px;
+  height: 30px;
+  backgound-size: 528px 62px;
+  border-radius: 50%;
 }
 
 .main-content {
@@ -90,6 +101,24 @@ body {
 
 #search-bar:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.flex-container {/*creating new flex container class. used for formatting space*/
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+}
+
+.flex-container > div {/*creating flex image formatting. used to help orient block locations*/
+  background-color: white;
+  width: 150px;
+  margin: 15px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+}
+#flex-container:hover{/*darkens the notification button, giving the impression of being clickable*/
+  opacity: 1;
 }
 
 input {

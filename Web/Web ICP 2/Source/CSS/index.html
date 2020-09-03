@@ -9,9 +9,13 @@
         <li><a href="#" class="nav-bar-opacity">Gmail</a></li>
         <li><a href="#" class="nav-bar-opacity">Images</a></li>
         <li><a href="#"><div id="menu-icon" class="nav-bar-opacity"></div></a></li>
+
+ <!----------------------------------------------------NEW LINES OF ADDED CODE HERE ---------------------------------------------------------->
         <!--inserted google notification icon here-->
-        <li><a href="#"><div id="notification-icon" class="notification-bar-opacity"></div></a></li><!--creates the notification icon in upper right-->
+        <li><a href="#"><div id = "notification-icon" class = "notification-bar-opacity"></div></a></li><!--creates the notification icon in upper right-->
+        <li><a href ="#"><div id = "image-icon" class = "image-icon-opacity"></div></a></li><!--creates the image icon in upper right-->
       </ul>
+
 
       <div class="main-content">
         <div id="logo">
@@ -21,11 +25,25 @@
           <input type="text" name="search">
           <a href="#" id="speech-link"><img src="https://lh5.googleusercontent.com/OorCLDb2xlVQ4P2MDNCiwAnpv0K1ZrcDwEwRS3sOfDMrnYTnVPvCh7WtFQMbZ_S9u_jzcSLd8g=s128-h128-e365" alt="Speech icon"></a>
         </div>
-        <div class="buttons">
-          <button name="Google-Search"><p>Google Search</p></button>
-          <button name="Feeling-Lucky"><p>I'm Feeling Lucky</p></button>
+        <!---creates the images for the recently viewed tab. Used images from my desktop-->
+
+        <div class="flex-container"><!--flex container used for the first row. Had to separate it and use the class since it would not orient correctly-->
+          <div><img src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmailmissouri-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!m0rFsGBZEUusscZeyqKoakJzzsaGE4lLhWlL-OJg2lxXFchYZ8TgQIUxRPvKYevv%2Fitems%2F01T4BHSWP6MQ2PV7QFWBFJ4BNZQIZIF2TT%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7BFA3464FE-05FE-4AB0-9E05-B9823282EA73%7D%2C1%22&srcWidth=&srcHeight=&width=1920&height=853&action=Access" style="width:100%"></div>
+          <div><img src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmailmissouri-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!m0rFsGBZEUusscZeyqKoakJzzsaGE4lLhWlL-OJg2lxXFchYZ8TgQIUxRPvKYevv%2Fitems%2F01T4BHSWKCMMQFWPELTVGIM6TABG3S5A4K%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7B5B206342-8B3C-4C9D-867A-6009B72E838A%7D%2C1%22&srcWidth=&srcHeight=&width=1920&height=853&action=Access" style = "width:100%"></div>
+          <div><img src = "https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmailmissouri-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!m0rFsGBZEUusscZeyqKoakJzzsaGE4lLhWlL-OJg2lxXFchYZ8TgQIUxRPvKYevv%2Fitems%2F01T4BHSWJ3V2L2SDTQ7BALO32DNCKZKFEY%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7BA997AE3B-700E-40F8-B76F-436895951498%7D%2C1%22&srcWidth=&srcHeight=&width=1920&height=853&action=Access" style = "width:100%"></div>
+          <div><img src = " https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmailmissouri-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!m0rFsGBZEUusscZeyqKoakJzzsaGE4lLhWlL-OJg2lxXFchYZ8TgQIUxRPvKYevv%2Fitems%2F01T4BHSWIKU5SAJMUCANBJ5TF6BP4GHLPV%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7B0464A70A-82B2-4203-9ECC-BE0BF863ADF5%7D%2C1%22&srcWidth=&srcHeight=&width=1920&height=853&action=Access" style = "width:100%"></div>
+        </div>
+
+        <div class="flex-container" ><!--flex container used for the second row-->
+          <div><img src = "https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmailmissouri-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!m0rFsGBZEUusscZeyqKoakJzzsaGE4lLhWlL-OJg2lxXFchYZ8TgQIUxRPvKYevv%2Fitems%2F01T4BHSWIOWNGNKFEKKNEL6EPTGBB5QHNF%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7BD54CB30E-8A14-4853-BF11-F33043D81DA5%7D%2C1%22&srcWidth=&srcHeight=&width=1920&height=853&action=Access" style = "width:100%"></div>
+          <div><img src = "https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmailmissouri-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!m0rFsGBZEUusscZeyqKoakJzzsaGE4lLhWlL-OJg2lxXFchYZ8TgQIUxRPvKYevv%2Fitems%2F01T4BHSWPANL3WZIDZPBCLX2KAFQTKQAU4%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7B6CF76AE0-79A0-4478-BBE9-402C26A8029C%7D%2C1%22&srcWidth=&srcHeight=&width=1920&height=853&action=Access" style = "width:70%"></div>
+          <div><img src = "https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmailmissouri-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!m0rFsGBZEUusscZeyqKoakJzzsaGE4lLhWlL-OJg2lxXFchYZ8TgQIUxRPvKYevv%2Fitems%2F01T4BHSWJQLXS4DSTIVRB25EVMM4VBI6G3%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7BC1E55D30-68CA-43AC-AE92-AC672A1478DB%7D%2C1%22&srcWidth=&srcHeight=&width=1920&height=853&action=Access" style = "width:80%"></div>
+          <div><img src = "https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmailmissouri-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!m0rFsGBZEUusscZeyqKoakJzzsaGE4lLhWlL-OJg2lxXFchYZ8TgQIUxRPvKYevv%2Fitems%2F01T4BHSWLCFK55Q2ATLFA3X4I3WCF7HKZC%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7BD8BB2A62-1368-4159-BBF1-1BB08BF3AB22%7D%2C1%22&srcWidth=&srcHeight=&width=1920&height=853&action=Access" style = "width:100%"></div>
+        </div>
+
         </div>
       </div>
+<!-----------------------------------------------------------------------END OF NEW LINES OF CODE---------------------------------------------------->
     </body>
     <footer>
       <div class="bottom-nav">
