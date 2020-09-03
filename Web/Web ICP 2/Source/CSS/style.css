@@ -47,16 +47,18 @@ body {
   opacity: 1;
 }
 
-#sign-in {
-  padding: 8px 11px;
-  background-color: #4285f4;
-  border-radius: 2px;
+.notification-bar-opacity {
+  opacity: 0.7;
 }
-
-#sign-in-text {
-  color: white !important;
-  font-weight: bold;
-  text-decoration: none !important;
+#notification-icon {
+  background-image: url("https://ssl.gstatic.com/gb/images/i2_2ec824b0.png");
+  width: 30px;
+  height: 30px;
+  background-position: -315px -38px;
+  background-size: 528px 68px;
+}
+#notification-icon:hover{
+  opacity: 1;
 }
 
 .main-content {
