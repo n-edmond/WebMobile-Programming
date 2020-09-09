@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>ICP 3 Rock Paper Scissors</title>
 </head>
-<body>
-<h1>Rock Paper Scissors<br></h1>
+<body style = "background-color:#26006f; color:white"><!--changes background color and font color-->
+
+    <h1>Rock Paper Scissors<br></h1>
 <!--this section is simply an intro to the page. It will give instructions on gameplay for the user-->
-<p>The rules of the game are simple. Select one of the icons listed below. <br>
-    <ul><!--bullet points of game rules are listed below here-->
-      <li>Rock will beat scissors but lose to paper.</li>
-      <li>Scissors will beat paper but lose to rock.</li>
-      <li>Paper will beat rock but lose to scissors.</li>
-      <li>Like symbols will tie.</li>
-    </ul>
-</p><h3>Select an icon to begin!<br></h3>
+    <p>The rules of the game are simple. Select one of the icons listed below. <br>
+        <ul><!--bullet points of game rules are listed below here-->
+          <li>Rock will beat scissors but lose to paper.</li>
+          <li>Scissors will beat paper but lose to rock.</li>
+          <li>Paper will beat rock but lose to scissors.</li>
+          <li>Like symbols will tie; no points will be added to score.</li>
+        </ul>
+    </p><br><br><h3 style = "text-align:center">Select an icon to begin!<br></h3>
 
 <!--------------------------------Icons for the game here----------------------->
-<div>
-    <input type="image" src="https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fmailmissouri-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!m0rFsGBZEUusscZeyqKoakJzzsaGE4lLhWlL-OJg2lxXFchYZ8TgQIUxRPvKYevv%2Fitems%2F01T4BHSWJQA7LVHHVOQVB2O35Q35JPXLVM%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7B53D70730-AE9E-4385-A76F-B0DF52FBAEAC%7D%2C1%22&srcWidth=&srcHeight=&width=1920&height=792&action=Access" alt="Submit" width="150" height="150">
-</div>
+    <div style = "text-align:center"><!--creates a clickable image to make a selection-->
+        <input type="image" src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/RPS/rock.jpg?raw=true" alt="Submit" width="150" height="150">
+        <input type="image" src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/RPS/paper.jpg?raw=true" alt="Submit" width="150" height="150">
+        <input type="image" src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/RPS/scissor.jpg?raw=true" alt="Submit" width="150" height="150">
+    </div><br><br>
+<!--------------------------------Score keeping here----------------------------->
+    <div style = "text-align:center">
+        <div><!--the player score is implemented here-->
+            You:
+            <span class = "result-score">0</span>
+        </div>
 
-</body>
-</html>
+        <div><!--the computer score is implemented here-->
+            Computer:
+            <span class = "result-score">0</span>
+        </div>
+    </div>
+
+</body><!--end of body-->
+
+</html><!--end of program-->
