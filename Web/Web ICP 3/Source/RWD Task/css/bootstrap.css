@@ -71,6 +71,7 @@ dfn {
 }
 h1 {
   font-size: 2em;
+  color: greenyellow !important;
   margin: 0.67em 0;
 }
 mark {
