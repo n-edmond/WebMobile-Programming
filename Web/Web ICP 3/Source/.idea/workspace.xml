@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9a0528d-c85a-40af-b3fc-6d9a1488cb8e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/javaCode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rockpaperscissors.html" beforeDir="false" afterPath="$PROJECT_DIR$/rockpaperscissors.html" afterDir="false" />
     </list>
@@ -32,6 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,6 +52,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -58,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599614219773</updated>
-      <workItem from="1599614220832" duration="5190000" />
+      <workItem from="1599614220832" duration="19512000" />
     </task>
     <servers />
   </component>
@@ -77,13 +82,13 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="425" y="189" key="run.anything.popup" timestamp="1599619766681">
+    <state x="425" y="189" key="run.anything.popup" timestamp="1599697678260">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599619766681" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599622622849">
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599697678260" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599702763254">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599622622849" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599702763254" />
   </component>
 </project>

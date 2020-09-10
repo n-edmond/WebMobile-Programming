@@ -1,0 +1,33 @@
+
+.selection{/*formats the selection buttons*/
+    background: none;
+    border: none;
+    outline: none;
+    justify-content: center;
+}
+
+.selection:hover{/*makes the buttons larger when you hover over them*/
+    transform: scale(1.1);
+}
+
+.results{/*makes the results section of the webpage into a grid.*/
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);/*creates the 2 columns for my grid*/
+    justify-items: center; /*keeps text in center despite page change*/
+}
+
+.result-score{/*not sure if I will use this yet. Idea is to make the final selection partially opaque*/
+    opacity: 1;
+    color:fuchsia;
+    font-weight: bold;
+}
+
+.final-sel{
+    opacity:.5;
+}
+
+.final-sel.wins{/*idea is to make the winning selection more vibrant than the losing one*/
+    opacity: 1;
+    font-size: 2rem;/*idea is to make winning font larger for easier identification*/
+
+}
