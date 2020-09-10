@@ -11,72 +11,94 @@ github links in the corresponding links--------------DONE
 
 -->
 
-<html>
+<html lang="en">
 <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <!--CDN INSTALLED BELOW HERE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--font accessibility here-->
+    <link rel=stylesheet" href=https://fonts.googleapis.cm/css? font-family="play"><!--used to allow the play font to be accessible for bootstrap-->
+    <!--adjusting styles for headers, font, and color here-->
+    <style>
+        body{
+            font-family: Play, sans-serif;/*nothing looked exact from the list you provided. Opted to just use play*/
+        }
+        h1,h3{
+            color:#747704/*changes the color for h1 and h3*/
+        }
+        h2{
+            color:#BCBBBB/*changes the color for h2*/
+        }
+        h3{
+            text-align: right;
+        }
 
-    <link href="bootstrap.css" type="text/css" rel="stylesheet"><!--including css style information for future use-->
-    <link href="bootstrap.min.css" type="text/css" rel="stylesheet"><!--including css style information for future use-->
-    <link href="bootstrap-theme.css" type="text/css" rel="stylesheet"><!--including css style information for future use-->
-    <link href="bootstrap-theme.min.css" type="text/css" rel="stylesheet"><!--including css style information for future use-->
-
-    <!--including CDN for bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"><!-- Latest compiled and minified CSS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!-- jQuery library -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><!-- Latest compiled JavaScript -->
-    <!--end of CDN inclusion-->
-
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <title>ICP 3 Bootstrap</title>
-
-
-
-
+    </style>
 </head>
+
 <body>
-<div>
-    <!--image should be 100x100-->
-    <div><!--TO DO STEP 2-->
-        <img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/bean.jpg?raw=true" class="img-responsive" alt="Mr. Bean" width="100" height="100">     </div>
-    <div>
-        <h1>Nehesia Edmond</h1><!--TO DO STEP 1-->
-        <h3>Computer Science Student</h3><!--TO DO STEP 1-->
-    </div>
+<div class="container">
+    <table class="table"><!--inserting a table with 2 columns for the image, name and designation-->
+        <thead>
+        <tr>
+            <th><img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/bean.jpg?raw=true"
+                     class="img-responsive" alt="Mr. Bean" width="100" height="100">
+            <th>
+                <h1 class = "text-right" >Nehesia Edmond<br></h1>
+                <h3 class = "text-muted">Computer Science Student</h3>
+            </th><!--creates the in line name and designation while muting designation-->
+
+        </tr>
+        </thead>
+    </table>
+
+
 </div>
-<div>
+
+<div class = "container">
     <!--image is 1140x350-->
     <img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/Image.png?raw=true" class="img-responsive" alt="image" width="1040" height="350">
-</div>
-<div>
-    <h2>Featured Work </h2>
-</div>
-<div>
     <div>
-        <!--image is 555*300-->
+        <h2>Featured Work </h2>
+    </div>
+</div>
+
+<!--------------------------------------------------------------BOTTOM IMAGE CHANGES MADE HERE--------------------------------------------------------------->
+<div class = "container"><!--using predefined classes from bootstrap to arrange the bottom row of images-->
+    <div class="col-md-3"><!--used to place all the images on the same row-->
+
+        <!--image is 555*300 CHANGING FROM DEFAULT IMAGE SIZE TO MAKE IT MATCH OTHER IMAGES-->
         <img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app1.png?raw=true" class="img-responsive" alt="image" width="555" height="300">
         <h3>APPIFY</h3><!--TO DO STEP 3-->
-        <p><a href="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app1.png?raw=true">Link to project</a></p>
+        <p><a href="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app1.png">https://github.com/n-edmond/WebMobile-Programming//Documentation</a></p>
     </div>
-    <div>
+
+    <div class="col-md-3">
         <!--image is 555*300-->
-        <img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app2.png?raw=true" class="img-responsive" alt="image" width="555" height="300">
+        <img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app2.png?raw=true" class="img-responsive" alt="image 2" width="555" height="300">
         <h3>SUNFLOWER</h3><!--TO DO STEP 3-->
-        <p><a href="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app2.png?raw=true">Link to project</a>
+        <p><a href="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app2.png">https://github.com/n-edmond/WebMobile-Programming//Documentation</a>
         </p>
     </div>
-</div>
-<div>
-    <div>
+
+        <div class="col-md-3">
         <!--image is 555*300-->
-        <img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app3.png?raw=true" class="img-responsive" alt="image" width="555" height="300">
+        <img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app3.png?raw=true" class="img-responsive" alt="image 3" width="555" height="300">
         <h3>BOKEH</h3><!--TO DO STEP 3-->
-        <p><a href="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app3.png?raw=true">Link to project</a></p>
+        <p><a href="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app3.png">https://github.com/n-edmond/WebMobile-Programming//Documentation</a></p>
     </div>
-    <div>
+
+    <div class="col-md-3">
         <!--image is 555*300-->
-        <img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app4.jpg?raw=true" class="img-responsive" alt="image" width="555" height="300">
+        <img src="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app4.jpg?raw=true" class="img-responsive" alt="image 4" width="555" height="300">
         <h3>PHONE</h3><!--TO DO STEP 3-->
-        <p><a href="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app4.jpg?raw=true">Link to project</a></p>
+        <p><a href="https://github.com/n-edmond/WebMobile-Programming/blob/master/Web/Web%20ICP%203/Documentation/SampleImages/app4.jpg">https://github.com/n-edmond/WebMobile-Programming//Documentation</a></p>
     </div>
+
 </div>
 
 
