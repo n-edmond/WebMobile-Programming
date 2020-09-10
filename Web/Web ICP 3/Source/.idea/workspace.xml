@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9a0528d-c85a-40af-b3fc-6d9a1488cb8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Source.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Source.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentation/image 5.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RWD Task/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/RWD Task/css/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RWD Task/input/input.html" beforeDir="false" afterPath="$PROJECT_DIR$/RWD Task/input/input.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +64,7 @@
       <updated>1599614219773</updated>
       <workItem from="1599614220832" duration="20993000" />
       <workItem from="1599715419812" duration="9804000" />
-      <workItem from="1599725781206" duration="21843000" />
+      <workItem from="1599725781206" duration="24648000" />
     </task>
     <servers />
   </component>
