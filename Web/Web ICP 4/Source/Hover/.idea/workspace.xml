@@ -19,50 +19,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9a0528d-c85a-40af-b3fc-6d9a1488cb8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="72092e21-a576-4400-9c67-a23e9066de4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Web ICP 3/Source/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web ICP 3/Source/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="ProjectId" id="1hFkRalSZhmQwV3v67pHe9tbGRx" />
+  <component name="ProjectId" id="1hYzs9EfGsVime1BHZ70x6L96Qq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b9a0528d-c85a-40af-b3fc-6d9a1488cb8e" name="Default Changelist" comment="" />
-      <created>1599614219773</created>
+      <changelist id="72092e21-a576-4400-9c67-a23e9066de4d" name="Default Changelist" comment="" />
+      <created>1600203018330</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1599614219773</updated>
-      <workItem from="1599614220832" duration="20993000" />
-      <workItem from="1599715419812" duration="9804000" />
-      <workItem from="1599725781206" duration="27443000" />
+      <updated>1600203018330</updated>
+      <workItem from="1600203019809" duration="5876000" />
     </task>
     <servers />
   </component>
@@ -79,16 +67,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="425" y="189" key="run.anything.popup" timestamp="1599733242284">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1600206199310">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599733242284" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599731565440">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599731565440" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600206199310" />
   </component>
 </project>
