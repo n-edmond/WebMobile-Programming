@@ -1,6 +1,13 @@
+
 function getGithubInfo(user) {
     //1. Create an instance of XMLHttpRequest class and send a GET request using it.
     // The function should finally return the object(it now contains the response!)
+
+    var xhttp = new XMLHttpRequest();//created xhttp request object
+    xhttp.open('GET', "https://api.github.com/", true);
+    xhttp.send();//sending the request
+
+
 }
 
 function showUser(user) {
