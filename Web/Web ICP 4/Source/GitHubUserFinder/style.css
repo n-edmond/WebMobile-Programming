@@ -1,3 +1,22 @@
+h1{
+  color: black;
+}
+
+html {
+  min-height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: #70bg32;
+  background-repeat:no-repeat;
+  background: -webkit-linear-gradient( to left top, blue, red);
+  background: -moz-linear-gradient( to left top, blue, red);
+  background: -ms-linear-gradient( to left top, blue, red);
+  background: -o-linear-gradient( to left top, blue, red);
+  background: linear-gradient( to left top, blue, red);
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   border-top: 5px solid #4c4066;
@@ -5,6 +24,7 @@ body {
   font-size: 14px;
   color: #666666;
   font-size: 16px;
+  color: white;
 }
 
 header {
@@ -43,6 +63,10 @@ input[type='text'] {
   border-bottom-left-radius: 5px;
 }
 
+.profile, .information ul {
+  list-style-position: inside;
+  text-align: center;
+}
 .search {
   text-align: center;
   margin: 50px auto;
@@ -65,4 +89,9 @@ h2 {
 
 .profile:hover {
   background-color: #b300b3;
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
 }
