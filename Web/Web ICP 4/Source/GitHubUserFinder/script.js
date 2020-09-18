@@ -21,7 +21,7 @@ function getGithubInfo(user) {//retrieves the info from github's API
 }
 
 function showUser(user) {
-    var html_url =
+    //var html_url =
     //2. set the contents of the h2 and the two div elements in the div '#profile' with the user content
     $('#profile .avatar img').remove()//removes image when function is called
     $('#profile .information li').remove()//removes text when function is called
