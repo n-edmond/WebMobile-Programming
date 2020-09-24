@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <!--1. write Typescript code in "app.component.ts" to work with ToDo list-->
+</head>
+<body>
+<!--2. write html(view) code to display the ToDos-->
+
+<!--here is where the header is completed. Wanted it to stand out so it is getting green boarder-->
+<div class="container-fluid"><!--bootstrap. allows the container to go across screen no matter screen size-->
+  <div class="row bg-success justify-content-center
+            align-items-center" style="height:100px">
+    <div class="col-3"></div>
+    <div class="col-3 text-light h2"><!--formatting box around title-->
+      To Do List for 2020
+    </div>
+<!-----------------------------------COUNT DOWN TIMER ADDED HERE------------------------------------------->
+    <div class="col-3 text-light h5"><!--formatting box around title-->
+      <p>End of Semester<br>{{demo}}<br>Final Day: {{countDownDate | date}}</p>
+    </div>
+  </div>
+  <!----------------------------------TO DO LIST ADDED HERE------------------------------------------------->
+    <div class="todo-list"><!--using your already created classes-->
+      <div class="todo-list__head">
+        <input [(ngModel)]="newT" type="text" value="" class=" col-7 form-control" style="width:300px;">
+        <div class="col-1"></div>
+        <button (click)="submitNewItem(newT)"  class="btn btn-light text-success">
+          ADD TO LIST
+        </button>
+      </div>
+<!------------------------------------BUTTONS ADDED HERE----------------------------------------------------->
+      <ul class="todo-list__items">
+        <li *ngFor="let todo of items; let i = index" [attr.data-index]="i" (click)="completeItem(todo)" [class.completed]="todo.complete">
+          <input (click)="deleteItem(i)" type="button" value="REMOVE FROM LIST" class="col-2 btn btn-danger">
+          <input (click)="completeItem(todo)" type ="button" value ="MARK COMPLETE"class ="col-2 btn btn-success">
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
