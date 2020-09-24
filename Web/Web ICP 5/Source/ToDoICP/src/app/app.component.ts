@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import index from '@angular/cli';
+import {$} from 'protractor';
+import {style} from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -9,46 +11,41 @@ import index from '@angular/cli';
 export class AppComponent {
 
   // define list of items
-  items = [];
-  public newT;
+  public items = []; // array to hold to do items
+  public newT; // public variable for access as needed
   countDownDate = new Date('Dec 15 2020 23:59:59').getTime(); /*used for countdown timer*/
-  demo: any;
+  demo: any; // USED FOR COUNTDOWN
 
-  temp = setInterval(() => {
-    var today = new Date().getTime();
-    var future = this.countDownDate - today; // calculates how much time is left before set date
-    var days = Math.floor(future / (1000 * 60 * 60 * 24)); // will calculate the number of days.
-    var hours = Math.floor((future % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) ); // will calculate the number of hours.
-    var minutes = Math.floor((future % (1000 * 60 * 60 )) / (1000 * 60 )); // will calculate the number of minutes.
-    var seconds = Math.floor((future % (1000 * 60 )) / (1000)); // will calculate number of seconds
+  temp = setInterval(() => { // calculates days,hours, minutes, etc.
+    let today = new Date().getTime();
+    let future = this.countDownDate - today; // calculates how much time is left before set date
+    let days = Math.floor(future / (1000 * 60 * 60 * 24)); // will calculate the number of days.
+    let hours = Math.floor((future % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) ); // will calculate the number of hours.
+    let minutes = Math.floor((future % (1000 * 60 * 60 )) / (1000 * 60 )); // will calculate the number of minutes.
+    let seconds = Math.floor((future % (1000 * 60 )) / (1000)); // will calculate number of seconds
 
-    this.demo = days + ' DAYS ' + hours + ' HOURS ' + minutes + ' MIN ' + seconds + ' SEC';
+    this.demo = days + ' DAYS ' + hours + ' HOURS ' + minutes + ' MIN ' + seconds + ' SEC'; // used for display in html
 
   });
 
   // Write code to push new item
-  submitNewItem(newT) {// creates a new item with bool var set to false. Indicates not complete
-    if (newT !== '') {
-      this.items.push({val: this.newT, complete: false}); // adds to list and marks complete as false
-      /*this.newT = ''; /*sets newT back to a blank character for future use */
+  submitNewItem() {// creates a new item with bool var set to false. Indicates not complete
+    if (this.newT === '') {
+    } else {
+      this.items.push(this.newT); // pushes user input into array
+      this.newT = ''; // used for user input. Resets it back to blank
     }
   }
 
   // Write code to complete item
-  completeItem(td) {// indicates items are complete by changing bool to true
-    for (let i = 0; i < this.items.length; i++) {
-      if (this.items[i] === td) {
-        this.items[i].complete = true; // setting the complete var to true.
-      }
-    }
+  completeItem(i) {
+    // creates variable that retrieves element for where the to do list item appears
+    let task = document.getElementsByClassName('col-9 text-black h3')as HTMLCollectionOf<HTMLElement>;
+    task[i].style.setProperty('text-decoration', 'line-through'); // strikes through the word
   }
 
   // Write code to delete item
   deleteItem(i) { // removes item from array
     this.items.splice(i, 1); /*specifies index to change the array.This will delete the item*/
   }
-}
-
-function myFunction() {
-  document.getElementById('demo').innerHTML = this.newT;
 }

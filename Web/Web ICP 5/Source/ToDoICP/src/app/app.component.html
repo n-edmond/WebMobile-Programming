@@ -10,34 +10,58 @@
 
 <!--here is where the header is completed. Wanted it to stand out so it is getting green boarder-->
 <div class="container-fluid"><!--bootstrap. allows the container to go across screen no matter screen size-->
-  <div class="row bg-success justify-content-center
+  <div class="row bg-info justify-content-center
             align-items-center" style="height:100px">
-    <div class="col-3"></div>
-    <div class="col-3 text-light h2"><!--formatting box around title-->
+
+    <div class="col-3 text-black h2"><!--formatting box around title-->
       To Do List for 2020
     </div>
 <!-----------------------------------COUNT DOWN TIMER ADDED HERE------------------------------------------->
-    <div class="col-3 text-light h5"><!--formatting box around title-->
+    <div class="col-3 text-black h5"><!--formatting box around title-->
       <p>End of Semester<br>{{demo}}<br>Final Day: {{countDownDate | date}}</p>
     </div>
   </div>
   <!----------------------------------TO DO LIST ADDED HERE------------------------------------------------->
-    <div class="todo-list"><!--using your already created classes-->
-      <div class="todo-list__head">
-        <input [(ngModel)]="newT" type="text" value="" class=" col-7 form-control" style="width:300px;">
-        <div class="col-1"></div>
-        <button (click)="submitNewItem(newT)"  class="btn btn-light text-success">
-          ADD TO LIST
-        </button>
-      </div>
-<!------------------------------------BUTTONS ADDED HERE----------------------------------------------------->
-      <ul class="todo-list__items">
-        <li *ngFor="let todo of items; let i = index" [attr.data-index]="i" (click)="completeItem(todo)" [class.completed]="todo.complete">
-          <input (click)="deleteItem(i)" type="button" value="REMOVE FROM LIST" class="col-2 btn btn-danger">
-          <input (click)="completeItem(todo)" type ="button" value ="MARK COMPLETE"class ="col-2 btn btn-success">
-        </li>
-      </ul>
+  <!--Division for taking input from user -->
+  <div class="row mt-1" style="height:80px;"><!--bootstrap used a lot for formatting-->
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+    <div class="col-12 col-md-6 bg-white d-flex
+                    justify-content-center align-items-center
+                    text-black h4">
+
+      <input [(ngModel)]="newT" type="text"
+             value="" class="col-7 form-control"
+             style="width:300px;">
+
+      <div class="col-1"></div>
+
+      <button (click)="submitNewItem()" class="btn btn-light text-black"><!--submits the item user input into array-->
+        ADD TO LIST
+      </button>
     </div>
+
+    <div class="col-3 col-md-3 d-md-block"></div>
   </div>
-</body>
-</html>
+
+  <!--Tasks added repeated divisions-->
+  <div *ngFor="let x of items; let index = index;"
+       class="row mt-1" style="height:100px;"><!--helps to iterate through the array created-->
+
+    <div class="col-3 col-md-3 d-md-block"></div>
+
+    <div class="col-12 col-md-6 bg-white d-flex
+                    justify-content-center align-items-center
+                    text-black h3"><!--more formatting-->
+
+      <div class="col-9 text-black h3">{{x}}</div><!--displays the items in the array so it appears on web page-->
+
+      <input (click)="deleteItem(index)" type="button"
+             value="Delete" class="col-2 btn btn-danger"><!--deletes item when delete button is clicked-->
+      <input (click) = "completeItem(index)" type = "button"
+              value= "Completed" class = "col-2 btn btn-success"><!--strikes through item when complete button is clicked-->
+    </div>
+
+
+  </div>
+</div>
+
