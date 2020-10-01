@@ -11,7 +11,23 @@
 
 }
 .desc {
-  font-family: Georgia;
+  font-family: cursive;
   font-size: 17px;
+  padding: 10px;
+  border: 5px solid gray;
+  background-color: black;
+  border-radius: 25px;
+
+}
+.subscr{
+  border: 5px solid gray;
+  background-color: black;
+  border-radius: 25px;
+}
+
+.title{
+  color:white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black
 }
 

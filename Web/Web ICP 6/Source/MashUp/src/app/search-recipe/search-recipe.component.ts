@@ -19,7 +19,7 @@ export class SearchRecipeComponent implements OnInit {
   @ViewChild('place') places: ElementRef;
   recipeValue: any;
   placeValue: any;
-  venueList = [] = [];
+  venueList: any;
   recipeList = [];
 
   currentLat: any;
@@ -67,11 +67,11 @@ export class SearchRecipeComponent implements OnInit {
 
     if (this.placeValue != null && this.placeValue !== '' && this.recipeValue != null && this.recipeValue !== '') {
       // tslint:disable-next-line:max-line-length
-      this._http.get('https://api.foursquare.com/v2/venues/search?' + this.credentials + '&near=' + this.placeValue + '&query=' + this.recipeValue + '&limit=10&v=20173009&m=foursquare'
+      this._http.get('https://api.foursquare.com/v2/venues/explore' + this.credentials +  '&v=20173009&&limit=10m&near='+ this.placeValue + '&query=' + this.recipeValue
     ).subscribe(result => {
           this.venueList.push(result['response']);
           console.log(this.venueList);
-          //console.log(result);
+          console.log(result);
         },
         error => {
 

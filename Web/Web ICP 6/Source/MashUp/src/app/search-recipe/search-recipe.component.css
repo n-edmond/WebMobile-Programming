@@ -1,18 +1,23 @@
+
+
 .parent-container {
   position: relative;
-  height:100%;
-  width: 100%;
+  height:75%;
+  width: 75%;
+  color: black;
 }
 
 .child-container {
-  color: white;
+  color: whitesmoke;
   text-align: center;
   position: center;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif
 
 }
 .desc {
-  font-family: Georgia;
+  font-family: "Sitka Heading";
   font-size: 17px;
+  font-color: aquamarine;
 }
 
 .thumbnail {
@@ -29,4 +34,16 @@
 .thumbnail:hover {
   cursor: pointer;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+}
+.button{
+  background-color: #4CAF50; /* Green */
+  border: thick;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
 }
