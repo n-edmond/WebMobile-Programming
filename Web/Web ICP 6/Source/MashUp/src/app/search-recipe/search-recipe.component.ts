@@ -1,6 +1,5 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import { Http, Response } from '@angular/http';
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 
@@ -19,7 +18,7 @@ export class SearchRecipeComponent implements OnInit {
   @ViewChild('place') places: ElementRef;
   recipeValue: any;
   placeValue: any;
-  venueList: any;
+  venueList = [];
   recipeList = [];
 
   currentLat: any;
@@ -33,7 +32,8 @@ export class SearchRecipeComponent implements OnInit {
 
   public data;
   // tslint:disable-next-line:max-line-length
-  private credentials = 'client_id=NGVHTOLBARR53FA3HJACBOQA3LJGBIJOSK45CXE5S420X3HF&client_secret=XMVXDPXCN1XLAPAR0YCWH24L4LD40I3YIAHZD3XL5XGA1L14';
+  private credentials = 'client_id=NGVHTOLBARR53FA3HJACBOQA3LJGBIJOSK45CXE5S420X3HF&' +
+    'client_secret=XMVXDPXCN1XLAPAR0YCWH24L4LD40I3YIAHZD3XL5XGA1L14';
   private rcredentials = 'app_id=33bd6a80&app_key=2c385b95519f0dfd3456a6c4eefc87ed';
 
   ngOnInit() {
@@ -68,11 +68,11 @@ export class SearchRecipeComponent implements OnInit {
 /*the same process as above is done here. We are instead acccessing venue locations similar to the food value*/
     if (this.placeValue != null && this.placeValue !== '' && this.recipeValue != null && this.recipeValue !== '') {
       // tslint:disable-next-line:max-line-length
-      this._http.get('https://api.foursquare.com/v2/venues/explore?&' + this.credentials +  '&v=20173009&&limit=10m&near=' + this.placeValue + '&query=' + this.recipeValue +
-    '').subscribe(result => {
+      this._http.get('https://api.foursquare.com/v2/venues/explore?' + this.credentials +
+        '&v=20180323&limit=10&near=' + this.placeValue + '&query=' + this.recipeValue + '')
+        .subscribe(result => {
           this.venueList = result['response'];
           console.log(this.venueList); // displays for testing
-          console.log(result); // displays for testing.
         },
         error => { // error handling here
 

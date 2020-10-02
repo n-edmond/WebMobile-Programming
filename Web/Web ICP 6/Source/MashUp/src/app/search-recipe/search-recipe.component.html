@@ -25,7 +25,7 @@
       <div class="panel panel-default col-6">
         <div class="panel-heading"><b>Here are some recipes related to your search:</b></div><!----provides food here-->
         <div class="panel-body">
-          <div *ngFor="let recipe of recipeList" class="list-group-item clearfix">
+          <div *ngFor="let recipe of recipeList" class="list-group-item clearfix"><!--used to iterate through list-->
 <!--------------------------------------------MOSTLY FORMATTING HERE ---------------------------------------------------->
             <div class="pull-right" style = "text-align:center">
               <h4 class="list-group-item-heading"><strong>{{ recipe.recipe.label }}</strong><br>   from    <em>{{recipe.recipe.source}}</em></h4>
@@ -47,13 +47,13 @@
     <!-----------------------------------------------RESTAURANT DISPLAY STARTS HERE------------------------------------->
     <div class="col-lg-6">
       <div class="panel panel-default col-6">
-        <div class="panel-heading"><b>Here are restaurants related to your search:</b></div>
+        <div class="panel-heading"><b>Here are restaurants related to your search:</b></div><!--shows the list of restaruants after this point-->
         <div class="panel-body">
 
-          <div *ngFor="let venue of venueList" class="list-group-item clearfix"> TESTING IDEAS-->
+          <div *ngFor="let venue of venueList" class="list-group-item clearfix">
           <div class=" List-group-item clearfix">
             <div class="pull-left">
-              <h4 class="list-group-item-heading">{{ venueList.geocode.displayString}}</h4><!--the idea for this was to have
+              <h4 class="list-group-item-heading">{{ venueList.venueList.name}}</h4><!--the idea for this was to have
               it display the name in the geocode part of the api-->
             </div>
 
@@ -71,5 +71,6 @@
   </div>
 </div>
 
+</div>
 
 
