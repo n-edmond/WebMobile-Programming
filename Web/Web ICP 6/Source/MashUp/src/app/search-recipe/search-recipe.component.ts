@@ -68,7 +68,7 @@ export class SearchRecipeComponent implements OnInit {
 /*the same process as above is done here. We are instead acccessing venue locations similar to the food value*/
     if (this.placeValue != null && this.placeValue !== '' && this.recipeValue != null && this.recipeValue !== '') {
       // tslint:disable-next-line:max-line-length
-      this._http.get('https://api.foursquare.com/v2/venues/explore&' + this.credentials +  '&v=20173009&&limit=10m&near=' + this.placeValue + '&query=' + this.recipeValue +
+      this._http.get('https://api.foursquare.com/v2/venues/explore?&' + this.credentials +  '&v=20173009&&limit=10m&near=' + this.placeValue + '&query=' + this.recipeValue +
     '').subscribe(result => {
           this.venueList = result['response'];
           console.log(this.venueList); // displays for testing
