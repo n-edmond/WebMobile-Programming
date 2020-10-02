@@ -27,13 +27,13 @@
         <div class="panel-body">
           <div *ngFor="let recipe of recipeList" class="list-group-item clearfix"><!--used to iterate through list-->
 <!--------------------------------------------MOSTLY FORMATTING HERE ---------------------------------------------------->
-            <div class="pull-right" style = "text-align:center">
-              <h4 class="list-group-item-heading"><strong>{{ recipe.recipe.label }}</strong><br>   from    <em>{{recipe.recipe.source}}</em></h4>
-              <a href="{{recipe.recipe.url}}" class="list-group-item-text">{{ recipe.recipe.url }}</a><!--accesses the url from the recipe api-->
+            <div class="bottom-left" style = "text-align:center">
+              <h5 class="list-group-item-heading"><strong>{{ recipe.recipe.label }}</strong><br>   from    <em>{{recipe.recipe.source}}<br></em></h5>
+             <a href="{{recipe.recipe.url}}" class="list-group-item-text">{{ recipe.recipe.url }}</a><!--accesses the url from the recipe api-->
             </div>
 
             <div class ="pull-right">
-          <img src="{{recipe.recipe.image}}" style="width: 200px; height: 200px;" align="center"/>
+          <img src="{{recipe.recipe.image}}" style="width: 40px; height: 20px;" align="center"/>
 
 
       </div>
@@ -49,21 +49,19 @@
       <div class="panel panel-default col-6">
         <div class="panel-heading"><b>Here are restaurants related to your search:</b></div><!--shows the list of restaruants after this point-->
         <div class="panel-body">
-
           <div *ngFor="let venue of venueList" class="list-group-item clearfix">
-          <div class=" List-group-item clearfix">
-            <div class="pull-left">
-              <h4 class="list-group-item-heading">{{ venueList.venueList.name}}</h4><!--the idea for this was to have
+          <!--<div class=" List-group-item clearfix">-->
+            <div styke = "text-align: center">
+              <h4 class="list-group-item-heading"><strong>{{ venue.venue.name}}</strong></h4><!--the idea for this was to have
               it display the name in the geocode part of the api-->
             </div>
+            <div class = "pull-right">
+              <h6 class="list-group-item-heading"><br><br>located: {{venue.venue.location.formattedAddress}}</h6>
 
-            <span class="pull-right"><!--part below is to show the google maps link to search for the location-->
-             <a href="http://maps.google.com/maps?saddr={{venueList?.geocode.center.lat}},{{venueList?.geocode.center.lng}}
-             &daddr={{venueList?.headerFullLocation}},{{venueList?.headerLocation}},{{venueList?.headerLocationGranularity}}">
-               <img src="../../assets/google.png" style="width: 30px; height: 30px;"></a>
-      </span>
+            </div>
 
-          </div>
+
+
 
         </div>
       </div>

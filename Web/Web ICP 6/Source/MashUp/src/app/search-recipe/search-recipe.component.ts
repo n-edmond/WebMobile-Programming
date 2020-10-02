@@ -56,7 +56,7 @@ export class SearchRecipeComponent implements OnInit {
 
       // used to excuse the limit error
       // tslint:disable-next-line:max-line-length
-      this._http.get('https://api.edamam.com/search?q=' + this.recipeValue + '&' + this.rcredentials + '&from=0&to=10&calories=591-722&health=alcohol-free'
+      this._http.get('https://api.edamam.com/search?q=' + this.recipeValue + '&' + this.rcredentials + '&from=0&to=5&calories=591-722&health=alcohol-free'
       ).subscribe(result => {
         this.recipeList = result['hits']; // saves the reciepe list as an obj.
 
@@ -69,10 +69,12 @@ export class SearchRecipeComponent implements OnInit {
     if (this.placeValue != null && this.placeValue !== '' && this.recipeValue != null && this.recipeValue !== '') {
       // tslint:disable-next-line:max-line-length
       this._http.get('https://api.foursquare.com/v2/venues/explore?' + this.credentials +
-        '&v=20180323&limit=10&near=' + this.placeValue + '&query=' + this.recipeValue + '')
+        '&v=20180323&limit=5&near=' + this.placeValue + '&query=' + this.recipeValue + '')
         .subscribe(result => {
-          this.venueList = result['response'];
+            // tslint:disable-next-line:max-line-length
+          this.venueList = result['response']['groups']['0']['items']; // since multi-layered, breaking each section into pieces to access names.
           console.log(this.venueList); // displays for testing
+          // console.log(this.venueList[0][2]);
         },
         error => { // error handling here
 
