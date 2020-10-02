@@ -18,21 +18,21 @@
     </form>
   </div>
 </div><br><br>
+<!------------------------------------------------RECIPE DISPLAY STARTS HERE-------------------------------------------->
 <div class="container">
   <div class="row">
     <div class="col-lg-6">
       <div class="panel panel-default col-6">
-        <div class="panel-heading"><b>Here are some recipes related to your search:</b></div>
+        <div class="panel-heading"><b>Here are some recipes related to your search:</b></div><!----provides food here-->
         <div class="panel-body">
           <div *ngFor="let recipe of recipeList" class="list-group-item clearfix">
-
-            <div class="pull-right">
+<!--------------------------------------------MOSTLY FORMATTING HERE ---------------------------------------------------->
+            <div class="pull-right" style = "text-align:center">
               <h4 class="list-group-item-heading"><strong>{{ recipe.recipe.label }}</strong><br>   from    <em>{{recipe.recipe.source}}</em></h4>
-              <a href="{{recipe.recipe.url}}" class="list-group-item-text">{{ recipe.recipe.url }}</a>
-              <h6>{{recipe?.recipe.healthlabels}}</h6>
+              <a href="{{recipe.recipe.url}}" class="list-group-item-text">{{ recipe.recipe.url }}</a><!--accesses the url from the recipe api-->
             </div>
 
-            <div class ="pull-left">
+            <div class ="pull-right">
           <img src="{{recipe.recipe.image}}" style="width: 200px; height: 200px;" align="center"/>
 
 
@@ -43,18 +43,21 @@
         </div>
       </div>
     </div>
+    <!---------------------------------------------NON FUNCTIONING------------------------------------------------------>
+    <!-----------------------------------------------RESTAURANT DISPLAY STARTS HERE------------------------------------->
     <div class="col-lg-6">
       <div class="panel panel-default col-6">
         <div class="panel-heading"><b>Here are restaurants related to your search:</b></div>
         <div class="panel-body">
 
-          <!--<div *ngFor="let venue of venueList" class="list-group-item clearfix">-->
+          <div *ngFor="let venue of venueList" class="list-group-item clearfix"> TESTING IDEAS-->
           <div class=" List-group-item clearfix">
             <div class="pull-left">
-              <h4 class="list-group-item-heading">{{ venueList?.geocode.displayString}}</h4>
+              <h4 class="list-group-item-heading">{{ venueList.geocode.displayString}}</h4><!--the idea for this was to have
+              it display the name in the geocode part of the api-->
             </div>
 
-            <span class="pull-right">
+            <span class="pull-right"><!--part below is to show the google maps link to search for the location-->
              <a href="http://maps.google.com/maps?saddr={{venueList?.geocode.center.lat}},{{venueList?.geocode.center.lng}}
              &daddr={{venueList?.headerFullLocation}},{{venueList?.headerLocation}},{{venueList?.headerLocationGranularity}}">
                <img src="../../assets/google.png" style="width: 30px; height: 30px;"></a>
