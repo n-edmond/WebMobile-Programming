@@ -63,10 +63,9 @@ export class ApiService {
         catchError(this.handleError)
       );
   }
-
   deleteBook(id: string): Observable<{}> {
     const url = `${apiUrl}/${id}`;
-    return this.http.delete(url, httpOptions)
+    return this.http.delete(apiUrl + '/' + id, httpOptions)
       .pipe(
         catchError(this.handleError)
       );

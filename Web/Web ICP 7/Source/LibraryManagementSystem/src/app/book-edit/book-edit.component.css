@@ -8,9 +8,9 @@
   width: 100%;
 }
 
-/*.example-full-width:nth-last-child() {
+.example-full-width:nth-last-child {
   margin-bottom: 10px;
-} does not like this for some reason. figure out why laer */
+}
 
 .button-row {
   margin: 10px 0;

@@ -11,12 +11,12 @@ import {FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validat
 export class BookCreateComponent implements OnInit {
 
   bookForm: FormGroup;
-  isbn: string = '';
-  title: string = '';
-  description: string = '';
-  author: string = '';
-  publisher: string = '';
-  published_year: string = '';
+  isbn = '';
+  title = '';
+  description = '';
+  author = '';
+  publisher = '';
+  published_year = '';
 
   matcher: any;
 
@@ -37,7 +37,7 @@ export class BookCreateComponent implements OnInit {
   onFormSubmit(form: NgForm) {
     this.api.postBook(form)
       .subscribe(res => {
-        let id = res['_id'];
+        const id = res['_id'];
         this.router.navigate(['/book-details', id]);
       }, (err) => {
         console.log(err);

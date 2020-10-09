@@ -27,7 +27,22 @@ router.post('/', function (req, res, next) {
 });
 
 /* UPDATE BOOK */
+router.put('/:id',function(req, res, next){
+  Book.updateOne(req.body,function(err, post) {
+    if (err)
+      return next(err);
+    res.json(post);
+  });
+});
+
 
 /* DELETE BOOK */
+router.delete('/:id',function(req, res, next){
+  Book.remove({"_id": req.params.id},function(err, post){
+    if (err)
+      return next(err);
+    res.json(200);
+  });
+});
 
 module.exports = router;
