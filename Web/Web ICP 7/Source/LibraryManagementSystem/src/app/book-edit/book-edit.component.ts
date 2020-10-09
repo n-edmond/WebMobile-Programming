@@ -22,7 +22,7 @@ export class BookEditComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private api: ApiService, private formBuilder: FormBuilder) {
   }
 
-  ngOnInit(){ // this section is intended to retrieve the book information for updating from the api
+  ngOnInit() { // this section is intended to retrieve the book information for updating from the api
     this.getBookDetails(this.route.snapshot.params['id']);
     this.bookForm = this.formBuilder.group({
       isbn: [null, Validators.required],
@@ -33,7 +33,7 @@ export class BookEditComponent implements OnInit {
       published_year: [null, Validators.required]
     });
   }
-getBookDetails(id){
+getBookDetails(id){ // retrieves info about the book by accessing its api
     this.api.getBook(id)
       .subscribe(data => {
         console.log(data);
