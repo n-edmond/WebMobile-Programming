@@ -19,6 +19,8 @@ ICP5: https://github.com/n-edmond/WebMobile-Programming/wiki/Web-ICP-5
 
 ICP6: https://github.com/n-edmond/WebMobile-Programming/wiki/Web-ICP-6
 
+ICP7: https://github.com/n-edmond/WebMobile-Programming/wiki/Web-ICP-7
+
 **Wiki Links for Mobile ICPs**
 
 TBD
