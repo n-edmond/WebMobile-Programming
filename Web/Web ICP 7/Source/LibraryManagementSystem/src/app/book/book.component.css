@@ -1,19 +1,38 @@
 .example-container {
   display: flex;
   flex-direction: column;
-  max-height: 500px;
-  min-width: 300px;
+  min-width: 100px;
   overflow: auto;
+
 }
 
 .isbn-col {
-  flex: 0 0 100px !important;
+  flex: 0 0 200px !important;
   white-space: unset !important;
 }
 
-.button-row {
-  margin: 10px 0;
+::ng-deep th.mat-header-cell{
+  width: 507px;
+  min-width: 506px;
+  text-align: center !important;
 }
+
+.tab2 {
+  tab-size: 4;
+}
+.button-row {
+  margin: 20px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.container {
+  height: 200px;
+  position: relative;
+}
+
 
 .image {/*adding background image */
   background-image: url("https://lithub.com/wp-content/uploads/2019/07/books.jpg");
@@ -22,4 +41,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-color: black;
+
+}
+.header{/*trying to edit the header*/)
+  text-align: center ;
+  color: white;
+  text-shadow:2px 2px 4px #000000
+}
+.mat-column-isbn{
+  flex: 0 0 100px;
+}
+.mat-column-title{
+  flex: 0 0 50px;
+}
+.mat-column-author{
+  flex: 0 0 50px;
 }
