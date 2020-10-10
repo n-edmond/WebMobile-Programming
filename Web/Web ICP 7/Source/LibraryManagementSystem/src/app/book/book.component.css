@@ -17,9 +17,6 @@
   text-align: center !important;
 }
 
-.tab2 {
-  tab-size: 4;
-}
 .button-row {
   margin: 20px 0;
   position: absolute;
@@ -57,4 +54,10 @@
 }
 .mat-column-author{
   flex: 0 0 50px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
