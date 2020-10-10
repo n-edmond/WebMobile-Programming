@@ -1,6 +1,3 @@
-
-var Book = require('.../modules/Book.js')
-
 var mongoose = require('mongoose');
 
 var BookSchema = new mongoose.Schema({
@@ -14,4 +11,3 @@ var BookSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Book', BookSchema);
-

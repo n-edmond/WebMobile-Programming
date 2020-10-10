@@ -18,7 +18,6 @@ export class BookCreateComponent implements OnInit {
   publisher = '';
   published_year = '';
 
-  matcher: any;
 
   constructor(private router: Router, private api: ApiService, private formBuilder: FormBuilder) {
   }

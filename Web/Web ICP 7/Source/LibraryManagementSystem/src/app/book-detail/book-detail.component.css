@@ -5,3 +5,7 @@
 .button-row {
   margin: 10px 0;
 }
+
+dt {
+  cursor: pointer;
+}

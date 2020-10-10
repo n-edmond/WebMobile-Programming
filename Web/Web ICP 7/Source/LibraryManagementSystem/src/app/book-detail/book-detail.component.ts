@@ -9,19 +9,7 @@ import {ApiService} from '../api.service';
 })
 export class BookDetailComponent implements OnInit {
 
-  book = {
-   /* isbn: undefined,
-    author: undefined,
-    publisher: undefined,
-    published_year: undefined,
-    description: undefined,
-    title: undefined, _id: '/book-edit',*/
-
-
-    updated_date() {
-
-    }
-  };
+  book = {};
 
   constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) {
   }
@@ -33,8 +21,7 @@ export class BookDetailComponent implements OnInit {
   getBookDetails(id) {
     this.api.getBook(id)
       .subscribe(data => {
-        console.log(data);
-        this.book = {...data};
+        this.book = data;
       });
   }
 
@@ -47,5 +34,4 @@ export class BookDetailComponent implements OnInit {
         }
       );
   }
-
 }

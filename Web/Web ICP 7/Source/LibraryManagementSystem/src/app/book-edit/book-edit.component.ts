@@ -8,7 +8,8 @@ import {FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validat
   templateUrl: './book-edit.component.html',
   styleUrls: ['./book-edit.component.css']
 })
-export class BookEditComponent implements OnInit {
+// NEW INFO ADDED HERE
+export class BookEditComponent implements OnInit { // copied info from book-create section to use here.
   bookForm: FormGroup;
   isbn: string = '';
   title: string = '';
@@ -16,39 +17,60 @@ export class BookEditComponent implements OnInit {
   author: string = '';
   publisher: string = '';
   published_year: string = '';
-
-  book = {};
+  book = {}; // used to save information added by user
+  //matcher: any;
 
   constructor(private router: Router, private route: ActivatedRoute, private api: ApiService, private formBuilder: FormBuilder) {
   }
 
-  ngOnInit() { // this section is intended to retrieve the book information for updating from the api
-    this.getBookDetails(this.route.snapshot.params['id']);
+  // NEW INFO ADDED HERE
+  ngOnInit() {
+    //this.getBookDetails(this.route.snapshot.params['id']);
+
+    // info retrieved from book-create.component file.
     this.bookForm = this.formBuilder.group({
-      isbn: [null, Validators.required],
-      title: [null, Validators.required],
-      description: [null, Validators.required],
-      author: [null, Validators.required],
-      publisher: [null, Validators.required],
-      published_year: [null, Validators.required]
+      'isbn': [null, Validators.required],
+      'title': [null, Validators.required],
+      'description': [null, Validators.required],
+      'author': [null, Validators.required],
+      'publisher': [null, Validators.required],
+      'published_year': [null, Validators.required]
+    });
+    this.getBook(this.route.snapshot.params['id']);
+  }
+//adding get book method here
+  getBook(id) {
+    this.api.getBook(id).subscribe(data => {
+      id = data._id;
+      this.bookForm.setValue({
+        isbn: data.isbn,
+        title: data.title,
+        description: data.description,
+        author: data.author,
+        publisher: data.publisher,
+        published_year: data.published_year
+      });
     });
   }
-getBookDetails(id){ // retrieves info about the book by accessing its api
+
+// adding getBookDetails method here
+
+getBookDetails(id) { // used to retrieve book id information from api
     this.api.getBook(id)
       .subscribe(data => {
         console.log(data);
         this.book = data;
       });
-}
-  onFormSubmit(form: NgForm) { // idea taken from your book-create.component.ts section. trying to update the info
+  }
+// adding onFormSubmit here
+  onFormSubmit(form: NgForm) { // this section should update the information when the user submits the changes
+    console.log(form);
     this.api.updateBook(this.route.snapshot.params['id'], form)
-      .subscribe(res => {
-        const id = res['_id']; // changed to constant
-        this.router.navigate(['/book-details', id]).then(r => {});
+      .subscribe( res => {
+        this.router.navigate(['/book-details', this.route.snapshot.params['id']]); // updates should be made to this section of the api
       }, (err) => {
-        console.log(err);
+        console.log(err); // here to catch errors
       });
   }
-
-
 }
+

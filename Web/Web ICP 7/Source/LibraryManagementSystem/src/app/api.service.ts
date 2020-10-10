@@ -13,8 +13,10 @@ const apiUrl = '/api';
 })
 export class ApiService {
 
+
   constructor(private http: HttpClient) {
   }
+
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
@@ -63,9 +65,12 @@ export class ApiService {
         catchError(this.handleError)
       );
   }
+
+  // slight edit made here to the return statement
   deleteBook(id: string): Observable<{}> {
     const url = `${apiUrl}/${id}`;
-    return this.http.delete(apiUrl + '/' + id, httpOptions)
+    // return this.http.delete(url, httpOptions)
+    return this.http.delete(apiUrl + '/' + id, httpOptions) // added a few concatenations
       .pipe(
         catchError(this.handleError)
       );
