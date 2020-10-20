@@ -23,7 +23,8 @@ ICP7: https://github.com/n-edmond/WebMobile-Programming/wiki/Web-ICP-7
 
 **Wiki Links for Mobile ICPs**
 
-TBD
+ICP8: https://github.com/n-edmond/WebMobile-Programming/wiki/Mobile-ICP-8
+
 
 
 **Wiki Link for Project:**
