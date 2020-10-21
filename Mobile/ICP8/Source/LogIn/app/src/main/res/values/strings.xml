@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LogIn</string>
+    <string name="login_screen">LogIn Screen</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="messageWithLink"><a href="https://www.android.com/phones-tablets/">Tap here for the newest androids</a></string>
+
+</resources>
