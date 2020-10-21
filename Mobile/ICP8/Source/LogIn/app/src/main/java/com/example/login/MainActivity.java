@@ -11,7 +11,7 @@ import android.widget.Toast;//used to display message to users
 
 public class MainActivity extends AppCompatActivity {
 
-    public  void myLogin(View view){
+    public void myLogin(View view){//creates an action once the user presses the login button
 
         EditText getUserName = (EditText) findViewById(R.id.username);
         EditText getPassword = (EditText) findViewById(R.id.password);
