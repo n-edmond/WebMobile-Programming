@@ -16,7 +16,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="1370dp"
             android:orientation="vertical"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
@@ -34,44 +34,6 @@
                 android:inputType="textCapWords"
                 android:textColor="#FFFFFF" />
 
-            <TextView
-                style="@style/HeaderTextStyle"
-                android:layout_width="421dp"
-                android:layout_height="48dp"
-                android:gravity="center_horizontal"
-                android:text="Select Your Crust"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF" />
-
-            <CheckBox
-                android:id="@+id/tossed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16sp"
-                android:paddingLeft="24dp"
-                android:text="Hand-Tossed"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/thin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16sp"
-                android:paddingLeft="24dp"
-                android:text="Thin Crust"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/deep"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16sp"
-                android:paddingLeft="24dp"
-                android:text="Deep Dish"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
 
             <TextView
                 style="@style/HeaderTextStyle"
@@ -91,7 +53,7 @@
                 tools:ignore="RtlCompat" />
 
             <CheckBox
-                android:id="@+id/whipped_cream_checked"
+                android:id="@+id/pepperoni"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16sp"
@@ -101,7 +63,7 @@
                 android:textSize="16sp" />
 
             <CheckBox
-                android:id="@+id/chocolate_checked"
+                android:id="@+id/sausage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16sp"
@@ -210,7 +172,7 @@
                 android:textSize="16sp" />
 
             <CheckBox
-                android:id="@+id/Spinach"
+                android:id="@+id/spinach"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16sp"
@@ -293,8 +255,8 @@
                     android:layout_height="48dp"
                     android:layout_marginRight="20dp"
                     android:onClick="decrement"
-                    android:textColor="@color/colorAccent"
-                    android:text="-" />
+                    android:text="-"
+                    android:textColor="@color/colorAccent" />
 
                 <TextView
                     android:id="@+id/quantity_text_view"
@@ -308,21 +270,21 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:onClick="increment"
-                    android:textColor="#00FF00"
-                    android:text="+" />
+                    android:text="+"
+                    android:textColor="#00FF00" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical|center_horizontal">
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="submit"
+                    android:onClick="submitOrder"
                     android:text="Submit Order"
                     android:textColor="@color/colorAccent"
                     android:textSize="20dp"
@@ -338,14 +300,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="          "
+                    android:text="  "
                     android:textColor="#FFFFFF" />
 
                 <Button
                     android:id="@+id/summary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Summary"
+                    android:onClick="order_summary"
                     android:text="Order Summary"
                     android:textColor="@color/colorAccent"
                     android:textSize="20dp"
