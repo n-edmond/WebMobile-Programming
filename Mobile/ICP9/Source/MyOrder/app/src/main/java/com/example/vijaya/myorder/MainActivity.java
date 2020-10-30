@@ -40,16 +40,11 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        // check if the request code is same as what is passed  here it is 2
-        if (requestCode == 2) {
+        // check if the request code is same as what is passed
+        if (requestCode == 2) {//redirect to the order activity
             Intent ordercomplete = new Intent(this, order.class);
-            //finish();
             startActivity(ordercomplete);//redirects to summary page
-
         }
-        /**
-         * This method is called when the order button is clicked.
-         */
     }
 
     public void submitOrder(View view) {
@@ -141,11 +136,6 @@ public class MainActivity extends AppCompatActivity{
 
         // Write the relevant code for making the buttons work(i.e implement the implicit and explicit intents
         sendEmail(orderSummaryMessage);//sends email
-
-        //Intent ordercomplete = new Intent(this, order.class);
-        //finish();
-        //startActivity(ordercomplete);//redirects to summary page
-
     }
 
     public void sendEmail(String output) {
@@ -162,16 +152,11 @@ public class MainActivity extends AppCompatActivity{
         intent.putExtra(Intent.EXTRA_TEXT, output);//populates the email body
 
         if (intent.resolveActivity(getPackageManager()) != null) {//checks for default email application
-            //startActivity(intent);
             startActivityForResult(Intent.createChooser(intent, "Choose an Email client :"),2);//redirects when order is complete
-            //finish();
 
         } else {//if none found, give an error message
             Toast.makeText(this, "No email client installed", Toast.LENGTH_LONG);
         }
-        //Intent ordercomplete = new Intent(this, order.class);
-        //finish();
-        //startActivity(ordercomplete);//redirects to summary page
     }
 
     private String boolToString(boolean bool) {
