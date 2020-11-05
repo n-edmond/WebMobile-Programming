@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Event Planner</string>
+
+    <string-array name= "Home">
+        <item>Weekly View</item>
+        <item>Calendar View</item>
+        <item>University Bookstore</item>
+        <item>University Email</item>
+        <item>Educational Resources</item>
+        <item>Mindfulness</item>
+        <item>Entertainment</item>
+    </string-array>
+
+    <string-array name="Description">
+        <item>The Weekly View tab will allow you to create, view, and edit your weekly schedule</item>
+        <item>The Calendar View will allow you to view, add, remove items from your monthly calendar</item>
+        <item>The University Bookstore will open a new window and direct you to the UMKC Bookstore</item>
+        <item>The Educational Resources will direct you to a page that will allow you to view study resources</item>
+        <item>Need to de-stress? Check out these mindfulness techniques </item>
+        <item>Tired? Check out our entertainment center</item>
+    </string-array>
+</resources>
