@@ -4,11 +4,14 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -21,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar; //used to access toolbar created in activity_main
     private ListView lists; //used to access list from activity_main
 
+    /**Program start up
+     * @param savedInstanceState
+     */
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP) //allows viewCreator to work
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //This section will first create the cards,toolbar, then list will be created upon start up
+        //order matters
         viewCreator();
         create_toolbar();
         listCreator();
@@ -62,6 +69,46 @@ public class MainActivity extends AppCompatActivity {
         Adapter adapter = new Adapter(this, title, description);
         lists.setAdapter(adapter);
 
+        lists.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //switch case implemented to know which item was clicked
+                switch (position) {
+                    case 0: {//if first section is selected, open new activity -->WeeklyView
+                        Intent intent = new Intent(MainActivity.this, WeeklyView.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case 1: {//if second option is selected, open new activity displaying monthly calendar
+                        break;
+                    }
+                    case 2: {//if third option is selected, it will open to umkc bookstore in new browser
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.umkcbookstore.com/"));
+                        startActivity(browserIntent);
+                        break;
+                    }
+                    case 3: {//if fourth option is selected it will open umkc email in new browser
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.umkc.edu/exchange/"));
+                        startActivity(browserIntent);
+                        break;
+                    }
+                    //WORK IN PROGRESS. PLACEHOLDER USED FOR NOW
+                    case 4: {//if fifth option is selected, open new actiivty showing educational resources
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://pitt.libguides.com/openeducation/biglist"));
+                        startActivity(browserIntent);
+                        break;
+                    }
+                    case 5: {//if sixth option chosen, open new activity showing youtube playlist. youtube api used here
+                        break;
+                    }
+                    //WORK IN PROGRESS BUTTON NON FUNCTIONAL FOR NOW
+                    case 6: {//if seventh option is chosen, open new activity, grid view of options for 2 games, facebook, hulu, netflix, youtube.
+                        break;
+                    }
+                    default: break;
+                }
+            }
+        });
     }
 
     /**
@@ -77,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
 
         /**
          * Constructor is created here. Used to help pupulate listview. Will be called on start up
-         *
          * @param c
          * @param title
          * @param descript
@@ -92,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
 
         /**
          * This section will return title's length
-         *
          * @return titleA.length
          */
         @Override
@@ -102,7 +147,6 @@ public class MainActivity extends AppCompatActivity {
 
         /**
          * This section will return the title's postion
-         *
          * @param position
          * @return titleA[postion]
          */
@@ -113,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
 
         /**
          * This section will return the position
-         *
          * @param position
          * @return position
          */
@@ -124,7 +167,6 @@ public class MainActivity extends AppCompatActivity {
 
         /**
          * This section will set each different view. Helps swap between the 2 main activities
-         *
          * @param position
          * @param convertView
          * @param parent
@@ -142,10 +184,10 @@ public class MainActivity extends AppCompatActivity {
             description = (TextView) convertView.findViewById(R.id.cardDescription);
             //set the image equal to in activity_main_2
             images = (ImageView) convertView.findViewById(R.id.mainImage);
-            title.setText(titleA[position]);
 
-            //--------------------------------------------------------------------------------ERROR HERE FIX ME -------------------------------->
-            //description.setText(descriptA[position]);
+            //set title and description
+            title.setText(titleA[position]);
+            description.setText(descriptA[position]);
 
             //This section will set the image for each title created in strings.xml
             if (titleA[position].equalsIgnoreCase("Weekly View")) {

@@ -9,46 +9,45 @@ Note that the elevation will help produce a shadow effect on the "cards"-->
     android:elevation="4dp"
     >
 
-<!--used to produce card layout. Images were found online or borrowed from umkc
-website  since image is small, so is the image layout. Can adjust as needed-->
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-<!--creating identifier image for each card here -->
-        <ImageView
-            android:id="@+id/mainImage"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="10dp"
-            />
+        <!--used for letter bubble Might not want it here. not sure yet-->
+        <com.example.eventplanner.Utils.LetterImageView
+            android:id="@+id/letters_day"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_margin="10dp"/>
 
-<!--creating text format for card here. This is title-->
+        <!--creating text format for card here. This is where subject info displays-->
         <TextView
-            android:id="@+id/cardTitle"
+            android:id="@+id/_subject"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/mainImage"
+            android:layout_toRightOf="@id/letters_day"
+            android:layout_alignTop="@id/letters_day"
             android:layout_marginTop="6dp"
-            android:text="Title"
+            android:text="Classes"
             android:textSize="24dp"
             android:textStyle="bold"
-
             />
 
-<!--creating text format for card here. This is description-->
+        <!--creating text format for card here. This is where class time displays-->
         <TextView
-            android:id="@+id/cardDescription"
+            android:id="@+id/_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/mainImage"
-            android:layout_below="@id/cardTitle"
             android:layout_marginLeft="10dp"
-            android:text="Description"
-            android:textSize="16dp"
-            android:textStyle="italic"
+            android:layout_toRightOf="@id/letters_day"
+            android:layout_alignBottom="@id/letters_day"
+            android:layout_marginTop="6dp"
+            android:text="Time"
+            android:textSize="18dp"
+            android:textStyle="bold"
             />
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
