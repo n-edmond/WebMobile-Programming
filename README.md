@@ -32,6 +32,7 @@ ICP10: https://github.com/n-edmond/WebMobile-Programming/wiki/Mobile-ICP-10
 
 
 **Wiki Link for Project:**
+
 https://github.com/n-edmond/WebMobile-Programming/wiki/Event-Planner
 
 
