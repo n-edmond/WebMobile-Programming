@@ -28,7 +28,6 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
     private GoogleMap mMap;
     public Geocoder geocoder;
     double latitude = 0, longitude = 0;
-    private static final int LOCATION_REQUEST_CODE = 101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,25 +75,20 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat
                 .checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
-            @NonNull String[] permissions = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
-            ActivityCompat.requestPermissions(this, permissions, LOCATION_REQUEST_CODE);
             return;
-        } else {
-            //Getting the current location of the user.
-
+        }
             // ICP Task1: Write the code to get the current location of the user
+            //Getting the address of the user based on latitude and longitude.
+
             userCurrentLocation.requestLocationUpdates(LocationManager.GPS_PROVIDER,
                     0, 0, userCurrentLocationListener);
             latitude = userCurrentLocation
-                    .getLastKnownLocation(LocationManager.GPS_PROVIDER)
-                    .getLatitude();
+                    .getLastKnownLocation(LocationManager.GPS_PROVIDER).getLatitude();
             longitude = userCurrentLocation
-                    .getLastKnownLocation(LocationManager.GPS_PROVIDER)
-                    .getLongitude();
+                    .getLastKnownLocation(LocationManager.GPS_PROVIDER).getLongitude();
             userCurrentLocationCoordinates = new LatLng(latitude, longitude);
-        }
 
-        //Getting the address of the user based on latitude and longitude.
+
         try {
             List<Address> addresses = geocoder.getFromLocation(latitude, longitude, 1);
             String city = addresses.get(0).getLocality();
@@ -122,7 +116,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResult) {
-        if (requestCode == LOCATION_REQUEST_CODE) {
+        if (requestCode == 101) {
             if (grantResult.length > 0 && grantResult[0] == PackageManager.PERMISSION_GRANTED) {
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                         != PackageManager.PERMISSION_GRANTED &&
@@ -139,4 +133,5 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
             Toast.makeText(LocationActivity.this, "Location permissions missing", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
