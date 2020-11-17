@@ -87,11 +87,11 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
                     0, 0, userCurrentLocationListener);
             latitude = userCurrentLocation
                     .getLastKnownLocation(LocationManager.GPS_PROVIDER)
-                    .getLatitude();
+                    .getLatitude();//gets latitude
             longitude = userCurrentLocation
                     .getLastKnownLocation(LocationManager.GPS_PROVIDER)
-                    .getLongitude();
-            userCurrentLocationCoordinates = new LatLng(latitude, longitude);
+                    .getLongitude();//gets longitude
+            userCurrentLocationCoordinates = new LatLng(latitude, longitude);//set the location to the given latitude/longitude
         }
 
         //Getting the address of the user based on latitude and longitude.

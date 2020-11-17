@@ -38,15 +38,15 @@ public class StorageActivity extends AppCompatActivity {
         FileOutputStream oStream;
 
         try {
-            oStream = openFileOutput(FILENAME, Context.MODE_APPEND);
-            oStream.write(txt_content.getText().toString().getBytes());
-            oStream.close();
+            oStream = openFileOutput(FILENAME, Context.MODE_APPEND);//opens the files and appends info
+            oStream.write(txt_content.getText().toString().getBytes());//add the inputted string to the text
+            oStream.close();//close file
         } catch (Exception e) {
             e.printStackTrace();
             throw e;
         }
 
-        // Clear text input, hide keyboard
+        // Clear text input, hide keyboard. Just making easier to see
         txt_content.setText("");
         hideKeyboard(txt_content);
 
@@ -59,17 +59,17 @@ public class StorageActivity extends AppCompatActivity {
         StringBuilder stringbuilt = new StringBuilder();
 
 
-        inStream = openFileInput(FILENAME);
+        inStream = openFileInput(FILENAME);//creating object to read file info
         InputStreamReader inputStreamReader = new InputStreamReader(inStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         String line = "";
 
         while ((line = bufferedReader.readLine()) != null){
-                stringbuilt.append(line);
+                stringbuilt.append(line);//while there is still info on the file, append it to the created strign.
         }
 
         inStream.close();
-        contenttoDisplay.setText(stringbuilt);
+        contenttoDisplay.setText(stringbuilt);//show the string info
         contenttoDisplay.setVisibility(View.VISIBLE);
 
     }

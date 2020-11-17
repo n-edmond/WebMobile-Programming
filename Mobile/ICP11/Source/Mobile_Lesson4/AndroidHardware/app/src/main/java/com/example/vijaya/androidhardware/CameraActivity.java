@@ -42,7 +42,7 @@ public class CameraActivity extends AppCompatActivity {
         }
         btOpen.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {//setting event listener. When button is clicked capture image
                 Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(cameraIntent, 100);
 
@@ -50,7 +50,7 @@ public class CameraActivity extends AppCompatActivity {
         });
     }
    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {//on the result of the camera intent, retrieve pic info
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 100) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
@@ -73,6 +73,6 @@ public class CameraActivity extends AppCompatActivity {
 
    public void redirectToHome(View v) {
         Intent redirect = new Intent(CameraActivity.this, MainActivity.class);
-        startActivity(redirect);
+        startActivity(redirect);//goes back to home screen when button is pushed
     }
 }
