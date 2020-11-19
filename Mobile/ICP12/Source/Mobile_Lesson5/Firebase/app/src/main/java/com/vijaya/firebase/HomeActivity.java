@@ -1,5 +1,6 @@
 package com.vijaya.firebase;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,6 +23,8 @@ public class HomeActivity extends AppCompatActivity {
     private TextView txtDetails;
     private EditText inputName, inputPhone;
     private Button btnSave;
+    private Button btnLogOut;
+    private Button btnDelete;
     private DatabaseReference mFirebaseDatabase;
     private FirebaseDatabase mFirebaseInstance;
 
@@ -39,6 +43,8 @@ public class HomeActivity extends AppCompatActivity {
         inputName = (EditText) findViewById(R.id.name);
         inputPhone = (EditText) findViewById(R.id.phone);
         btnSave = (Button) findViewById(R.id.btn_save);
+        btnLogOut = (Button) findViewById(R.id.btn_logout);
+        btnDelete = (Button) findViewById(R.id.btn_delete);
 
         mFirebaseInstance = FirebaseDatabase.getInstance();
 
@@ -81,6 +87,31 @@ public class HomeActivity extends AppCompatActivity {
                     updateUser(name, phone);
                 }
             }
+        });
+
+        /**TODO ADDING LOG OUT FUNCTIONALITY HERE
+         */
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent ( HomeActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
+        /**TODO ADDING DELETE FUNCTIONALITY HERE
+         *
+         */
+
+        btnDelete.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                String name = inputName.getText().toString();
+                String phone = inputPhone.getText().toString();
+                deleteUser(name,phone);
+            }
+
         });
 
         toggleButton();
@@ -151,5 +182,18 @@ public class HomeActivity extends AppCompatActivity {
 
         if (!TextUtils.isEmpty(phone))
             mFirebaseDatabase.child(userId).child("phone").setValue(phone);
+    }
+
+    /**
+     * Deletes user information from db
+     * @param name
+     * @param phone
+     */
+    private void deleteUser(String name, String phone){
+        if (!TextUtils.isEmpty(name))
+            mFirebaseDatabase.child(userId).child("name").removeValue();
+
+        if (!TextUtils.isEmpty(phone))
+            mFirebaseDatabase.child(userId).child("phone").removeValue();
     }
 }
