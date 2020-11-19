@@ -41,6 +41,8 @@ public class EmployerActivity extends AppCompatActivity {
                 readFromDB();
             }
         });
+
+
     }
 
     private void saveToDB() {
@@ -106,4 +108,5 @@ public class EmployerActivity extends AppCompatActivity {
 
         binding.recycleView.setAdapter(new SampleRecyclerViewCursorAdapter(this, cursor));
     }
+
 }
