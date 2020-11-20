@@ -38,4 +38,8 @@
     <string name="reset_password">Reset Password</string>
     <string name="go_back">Go Back</string>
     <string name="save_profile">Save Profile</string>
+
+    <!--delete message string-->
+    <string name="delete_prompt_title">ARE YOU SURE?</string>
+    <string name="delete_prompt_message">This action will completely delete your account. Information saved cannot be accessed again.</string>
 </resources>

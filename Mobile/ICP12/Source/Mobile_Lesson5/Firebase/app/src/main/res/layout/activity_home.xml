@@ -12,6 +12,15 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.vijaya.firebase.HomeActivity">
 
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Logout"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/txt_user"
         android:layout_width="wrap_content"
@@ -55,6 +64,7 @@
                 android:maxLines="1"
                 android:textColor="@android:color/holo_blue_dark"
                 android:autofillHints="" />
+
         </android.support.design.widget.TextInputLayout>
 
         <Button
@@ -67,29 +77,24 @@
             android:text="@string/save_profile"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
-
         <Button
-            android:id="@+id/btn_logout"
+            android:id="@+id/btn_delete"
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="#A9A851B6"
-            android:text="Log out"
+            android:background="#850004"
+            android:text="Delete Profile"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_delete"
-        style="?android:textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#A81616"
-        android:text="Delete Profile"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
 
 </LinearLayout>
