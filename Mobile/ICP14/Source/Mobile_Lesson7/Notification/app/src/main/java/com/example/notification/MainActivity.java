@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Set calendar to current date
         calendarView.setDate(Calendar.getInstance().getTimeInMillis());
 
-        // Set initial date string in dateView
+        // sets initial string for dateView
         final DateFormat df = DateFormat.getDateInstance(DateFormat.LONG);
         dateView.setText(df.format(calendarView.getDate()));
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                // Create new date object from parameters for long date format
+                // Creates object to hold formatting for dates
                 Date date = new GregorianCalendar(year, month, dayOfMonth).getTime();
                 YEAR = year; MONTH = month; DAY = dayOfMonth;
 
@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        //EXIT ON CREATE
-
         public void open(View view){
+        //function used when + button is clicked
             Calendar cal = Calendar.getInstance();
 
+            //will set the year, month, day variables
             calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
                 @Override
                 public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     //dateView.setText(df.format(date));
                 }
             });
+            //used to open google calenar app
             Intent intent = new Intent(Intent.ACTION_INSERT,
                     CalendarContract.Events.CONTENT_URI);
             // Add the calendar event details
