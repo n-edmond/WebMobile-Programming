@@ -35,7 +35,7 @@ ICP12: https://github.com/n-edmond/WebMobile-Programming/wiki/Mobile-ICP-12
 
 ICP13: https://github.com/n-edmond/WebMobile-Programming/wiki/Mobile-ICP-13
 
-ICP14: TBD
+ICP14: https://github.com/n-edmond/WebMobile-Programming/wiki/Mobile-ICP-14
 
 
 **Wiki Link for Project:**
